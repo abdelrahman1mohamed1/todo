@@ -1,0 +1,139 @@
+:root {
+    --header-size--: 4rem; /* 64px */
+    --secondry-size--: 3rem; /* 48px */
+    --small-size--: 2rem; /* 32px */
+    --main-color--: #FFDDF6;
+    --sec-color--: #FFF0FB;
+    --border-radius--: 25px;
+}
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+}
+h1 {
+    font-weight: bold;
+}
+h2 {
+    font-weight: lighter;
+}
+body{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+button {
+    border: none;
+    background: none;
+}
+.header {
+    text-align: left;
+    width: 500px;
+    margin: 60px 0 80px 0;
+}
+.input {
+    position: relative;
+    width: 500px;
+    height: 150px;
+    background-color: var(--main-color--);
+    display: flex;
+    justify-content: center;
+    border-radius: var(--border-radius--);
+}
+.green {
+    background-color: rgb(0, 255, 0);
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.red {
+    background-color: red;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.action-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 40px;
+}
+.inptbox {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    background: #fff;
+    width: 70%;
+    height: 55px;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.26);
+-moz-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.26);
+box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.26);
+}
+.inptbox input {
+    border: none;
+    outline: none;
+    background: #F8F8F8;
+    width: 220px;
+    height: 35px;
+    border-radius: 8px;
+    padding: 5px;
+}
+input::placeholder {
+    opacity: .5;
+    font-size: 15px;
+    padding: 5px;
+    color: black;
+}
+.output {
+    position: absolute;
+    width: 500px;
+    background: var(--sec-color--);
+    border-radius: var(--border-radius--);
+    top: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taskadd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #F8F8F8;
+    width: 70%;
+    height: 10px;
+    margin: 5px;
+    border-radius: var(--border-radius--);
+    font-size: 15px;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+.error {
+    gap: 0;
+}
+.error input {
+    border: 1.5px solid red;
+    color: red;
+}
+.error input::placeholder {
+    color: red;
+}
+.error::after {
+    content: "type a task";
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 38;
+    right: 150;
+    width: 40px;
+}
